@@ -3,6 +3,24 @@
 
 解读koa-router源码，并根据理解仿造一个精简版的router，之后应该不会更新拓展其他方法，多了反而对理解核心造成不必要的阻碍
 
+### 使用方法
+npm install simple-koa-router --save
+```$javascript
+var Koa = require('koa');
+var Router = require('simple-koa-router');
+ 
+var app = new Koa();
+var router = new Router();
+ 
+router.get('/', (ctx, next) => {
+  // ctx.router available
+});
+ 
+app
+  .use(router.routes());
+
+```
+
 ### V0.0.1
 实现基本的match、register、routes功能
 
