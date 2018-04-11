@@ -558,6 +558,23 @@ Router.prototype.register = function (path, methods, middleware, opts) {
     prefix: opts.prefix || this.opts.prefix || "",
     ignoreCaptures: opts.ignoreCaptures
   });
+  console.log('route===>>>', route);
+  /**
+   * Layer {
+   * opts:
+   *  { end: true,
+   *   name: 'home',
+   *   sensitive: false,
+   *   strict: false,
+   *   prefix: '',
+   *   ignoreCaptures: undefined },
+   * name: 'home',
+   * methods: [ 'HEAD', 'GET' ],
+   * paramNames: [],
+   * stack: [ [Function] ],
+   * path: '/',
+   * regexp: { /^(?:\/(?=$))?$/i keys: [] } }
+   */
 
   if (this.opts.prefix) {
     route.setPrefix(this.opts.prefix);
@@ -665,6 +682,8 @@ Router.prototype.match = function (path, method) {
     if (layer.match(path)) {
       matched.path.push(layer);
 
+      console.log('layer.methods.length==>>', layer.methods.length);
+      console.log('~layer.methods.indexOf(method)==>>', ~layer.methods.indexOf(method));
       if (layer.methods.length === 0 || ~layer.methods.indexOf(method)) {
         matched.pathAndMethod.push(layer);
         if (layer.methods.length) matched.route = true;

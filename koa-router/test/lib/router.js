@@ -86,6 +86,7 @@ describe('Router', function () {
             url: ctx.router.url('home')
           };
       });
+      console.log('routes===>>', router.routes());
       app.use(router.routes());
       request(http.createServer(app.callback()))
           .get('/')
