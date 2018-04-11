@@ -1,6 +1,6 @@
 {
   "name": "simple-koa-router",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "create a simple koa-router，learn from koa-router",
   "main": "lib/router.js",
   "directories": {
