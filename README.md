@@ -1,6 +1,12 @@
 # simple-koa-router
 
-解读koa-router源码，并根据理解仿造一个精简版的router，实现基本的match、register、routes功能
+解读koa-router源码，并根据理解仿造一个精简版的router，之后应该不会更新拓展其他方法，多了反而对理解核心有不必要的阻碍
+
+### V0.0.1
+实现基本的match、register、routes功能
+
+### V0.0.2
+实现对正则path的匹配
 
 > test暂未补全
 
