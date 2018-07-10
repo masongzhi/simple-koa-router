@@ -1,9 +1,14 @@
 # simple-koa-router
+
+
+[![npm](https://img.shields.io/npm/dt/simple-koa-router.svg)](https://www.npmjs.com/package/simple-koa-router)
+
+
 > test暂未补全
 
 解读koa-router源码，并根据理解仿造一个精简版的router，之后应该不会更新拓展其他方法，多了反而对理解核心造成不必要的阻碍
 
-### 使用方法
+## 使用方法
 npm install simple-koa-router --save
 ```$javascript
 var Koa = require('koa');
@@ -20,17 +25,17 @@ app
   .use(router.routes());
 
 ```
-
-### V0.0.1
+## Update
+### v0.0.1
 实现基本的match、register、routes功能
 
-### V0.0.2
+### v0.0.2
 实现对正则path的匹配
 
-### V0.0.3
+### v0.0.3
 添加便于理解的log，增加readme个人总结
 
-# 个人总结：解读并实现一个简单的koa-router
+## 个人总结：解读并实现一个简单的koa-router
 简书链接: [https://www.jianshu.com/p/7bf7f1368293](https://www.jianshu.com/p/7bf7f1368293)  
 掘金链接: [https://juejin.im/post/5ace67a26fb9a028da7ce708](https://juejin.im/post/5ace67a26fb9a028da7ce708)
 
